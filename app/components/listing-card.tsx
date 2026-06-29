@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Listing } from "@/app/lib/listings-data";
 
 type ListingCardProps = {
@@ -19,7 +20,14 @@ export const ListingCard = ({ listing, href }: ListingCardProps) => {
   return (
     <Link href={href} className="group block rounded-3xl bg-white p-3 shadow-sm transition hover:shadow-lg">
       <article>
-        <div className="relative mb-3 h-44 rounded-2xl" style={{ background: listing.imageColor }}>
+        <div className="relative mb-3 h-44 overflow-hidden rounded-2xl">
+          <Image
+            src={listing.imageUrl}
+            alt={listing.title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 20vw"
+            className="object-cover transition duration-300 group-hover:scale-105"
+          />
           <span className="absolute left-2 top-2 rounded-full bg-white/95 px-2 py-1 text-xs font-medium">
             Recomendacion del viajero
           </span>

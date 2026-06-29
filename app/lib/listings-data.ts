@@ -13,10 +13,12 @@ export type Listing = {
   reviews: number;
   hostName: string;
   hostYears: number;
-  imageColor: string;
+  imageUrl: string;
   photos: string[];
   amenities: Amenity[];
 };
+
+const sharedRoomImage = "/imagenes/hoteles-de-la-costa-mediterranea-de-Espana.webp";
 
 export const categoryOptions = [
   { id: "all", label: "Todas", icon: "🌍" },
@@ -36,8 +38,8 @@ export const listingsData: Listing[] = [
     reviews: 53,
     hostName: "Mauro",
     hostYears: 2,
-    imageColor: "#d9dce2",
-    photos: ["#d9dce2", "#eceef2", "#c7cbd4", "#b9beca"],
+    imageUrl: sharedRoomImage,
+    photos: [sharedRoomImage, sharedRoomImage, sharedRoomImage, sharedRoomImage],
     amenities: [
       { icon: "📶", label: "Wifi" },
       { icon: "🚿", label: "Bano privado" },
@@ -55,8 +57,8 @@ export const listingsData: Listing[] = [
     reviews: 41,
     hostName: "Laura",
     hostYears: 3,
-    imageColor: "#dccdb7",
-    photos: ["#dccdb7", "#efe2d0", "#ccb79a", "#bca47f"],
+    imageUrl: sharedRoomImage,
+    photos: [sharedRoomImage, sharedRoomImage, sharedRoomImage, sharedRoomImage],
     amenities: [
       { icon: "📶", label: "Wifi" },
       { icon: "🧺", label: "Lavadora" },
@@ -74,8 +76,8 @@ export const listingsData: Listing[] = [
     reviews: 67,
     hostName: "Carlos",
     hostYears: 5,
-    imageColor: "#c8d6cb",
-    photos: ["#c8d6cb", "#dce8df", "#aec1b4", "#95aa9c"],
+    imageUrl: sharedRoomImage,
+    photos: [sharedRoomImage, sharedRoomImage, sharedRoomImage, sharedRoomImage],
     amenities: [
       { icon: "📶", label: "Wifi" },
       { icon: "💻", label: "Zona de trabajo" },
@@ -93,8 +95,8 @@ export const listingsData: Listing[] = [
     reviews: 35,
     hostName: "Nora",
     hostYears: 4,
-    imageColor: "#e2c8c2",
-    photos: ["#e2c8c2", "#f0ddd9", "#cfaaa1", "#b88f85"],
+    imageUrl: sharedRoomImage,
+    photos: [sharedRoomImage, sharedRoomImage, sharedRoomImage, sharedRoomImage],
     amenities: [
       { icon: "📶", label: "Wifi" },
       { icon: "📺", label: "Smart TV" },

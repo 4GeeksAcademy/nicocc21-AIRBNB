@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { ListingCard } from "@/app/components/listing-card";
 import { LoadingIndicator } from "@/app/components/loading-indicator";
@@ -70,8 +71,19 @@ export const CatalogPageClient = () => {
               <ListingCard key={listing.id} listing={listing} href={`/rooms/${listing.id}`} />
             ))}
           </section>
-          <aside className="rounded-3xl border border-[#ddd] bg-[#ececec] p-6 text-center text-[#555] min-[1000px]:sticky min-[1000px]:top-24 min-[1000px]:h-[420px]">
-            Mapa
+          <aside className="rounded-3xl border border-[#ddd] bg-white p-3 text-center text-[#555] min-[1000px]:sticky min-[1000px]:top-24 min-[1000px]:h-[420px]">
+            <div className="relative h-full overflow-hidden rounded-2xl">
+              <Image
+                src="/imagenes/hoteles-de-la-costa-mediterranea-de-Espana.webp"
+                alt="Vista costera de Alicante"
+                fill
+                sizes="(max-width: 1000px) 100vw, 33vw"
+                className="object-cover"
+              />
+              <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#333]">
+                Zona destacada
+              </span>
+            </div>
           </aside>
         </div>
       </div>
